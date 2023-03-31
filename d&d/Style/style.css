@@ -1,0 +1,169 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  display: grid;
+  font-family: 'Carolingia', sans-serif;
+  text-align: center;
+  grid-row: auto;
+  grid-column: 4;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#bienvenue {
+  background-image: url("..//img/header.png");
+  width: 100%;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  grid-column: 1/span5;
+  grid-row: auto;
+}
+
+.perso{
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1/5;
+  grid-template-rows: auto;
+}
+#perso1 {
+  text-align: center;
+  width: 350px;
+  height: auto;
+  grid-column: 2/3 ;
+  grid-row: 3;
+}
+
+#perso2 {
+  width: 350px;
+  height: auto;
+  grid-column: 3/4;
+  grid-row: 3;
+}
+
+#perso3 {
+  width: 350px;
+  height: auto;
+  grid-column: 4/    5;
+  grid-row: 3;
+}
+
+header {
+  grid-column: 1 / span 5;
+  grid-row: auto;
+}
+
+nav {
+  background-color: rgb(123, 123, 123);
+  grid-column: 1/ span 5;
+  grid-row: auto;
+}
+
+.news {
+  display: grid;
+  grid-column: 1/ span5;
+  grid-row: auto;
+}
+
+footer {
+  display: grid;
+  grid-column: 1/span 5;
+  grid-row: auto;
+  align-items: center;
+  background-color: rgb(123, 123, 123);
+}
+
+/* Sidenav menu */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  background-color: #e8e8e8;
+  padding-top: 60px;
+  transition: left 0.5s ease;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #111;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+  left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+/* Icone burger */
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  border-radius: 1000px;
+}
+
+li {
+  font-family: 'Carolingia', sans-serif;
+}
+
+.bouton-utilisateur {
+  display: inline-block;
+  position: relative;
+}
+
+.bouton-utilisateur-lien {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  background: #333;
+}
+
+.bouton-utilisateur-lien:hover {
+  background: #444;
+}
+
+.bouton-utilisateur-lien .fa {
+  margin-right: 5px;
+}
