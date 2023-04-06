@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Donjon-et-Dragon/d&d/Style/index.css">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<nav>
+
+            <!--Menu Burger-->
+            <div id="mySidenav" class="sidenav">
+                <a id="closeBtn" href="#" class="close">×</a>
+                <ul>
+                    <li><a href="https://play.aidungeon.io/main/home">IA Fun</a></li>
+                    <li><a href="#">Vos Personnages</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <?php
+                    if (isset($_SESSION['nom_u'])) {
+                        if ($_SESSION['role_u'] == 1) {
+                    ?>
+                    <li><a href="#">Espace Admin</a></li>
+                    <?php
+                        } elseif ($_SESSION['role_u'] == 1) {
+                    ?>
+                    <li><a href="#">Espace utilisateur</a> </li>
+                    <?php
+                        }
+                    }
+
+                    ?>
+                </ul>
+            </div>
+            <a href="#" id="openBtn">
+                <span class="burger-icon">
+                    <span></span>
+                </span>
+            </a>
+           
+            <h1>La taverne d'Édève</h1>
+            <div class="user-widget">
+                <?php if (isset($_SESSION['nom_u']) && $_SESSION['role_u'] !== null): ?>
+                <a href="logout.php">Se déconnecter</a>
+                <?php else: ?>
+                <a href="connect.php">Se connecter</a>
+                <?php endif; ?>
+            </div>
+            <a class="login" href="utilisateur.php"></a>
+        </nav>

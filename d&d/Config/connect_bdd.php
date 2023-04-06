@@ -1,15 +1,42 @@
 <?php
-$host = 'localhost'; // L'adresse du serveur MySQL
-$user = 'root'; // Le nom d'utilisateur de la base de données
-$password = ''; // Le mot de passe de la base de données
-$dbname = 'bloc3_nvsave'; // Le nom de la base de données
 
-// Création de la connexion
-$conn = mysqli_connect($host, $user, $password, $dbname);
+namespace App;
 
-// Vérification de la connexion
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+/**
+ * Application configuration
+ *
+ * PHP version 7.0
+ */
+class Config
+{
+
+    /**
+     * Database host
+     * @var string
+     */
+    const DB_HOST = 'localhost';
+
+    /**
+     * Database name
+     * @var string
+     */
+    const DB_NAME = 'bloc3-nvsave';
+
+    /**
+     * Database user
+     * @var string
+     */
+    const DB_USER = 'root';
+
+    /**
+     * Database password
+     * @var string
+     */
+    const DB_PASSWORD = '';
+
+    /**
+     * Show or hide error messages on screen
+     * @var boolean
+     */
+    const SHOW_ERRORS = true;
 }
-echo "Connected successfully";
-?>
